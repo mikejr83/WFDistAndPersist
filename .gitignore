@@ -1,0 +1,10 @@
+bin
+obj
+*.suo
+*.vspscc
+/WFDistributionAndPersistence/packages/SumTotal.Support.2014.1.0.22
+/WFDistributionAndPersistence/packages/NLog.2.1.0
+/WFDistributionAndPersistence/packages/NLog.Config.2.1.0
+/WFDistributionAndPersistence/packages/NLog.Schema.2.1.0
+/WFDistributionAndPersistence/packages/Telerik*
+/WFDistributionAndPersistence/packages/AutoMapper*

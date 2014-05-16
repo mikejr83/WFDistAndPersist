@@ -1,0 +1,181 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Distributor.Workflow.Workflow2" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="Distributor.Workflow.Workflow2_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:local="clr-namespace:Distributor.Activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>NLog</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>SumTotal.Support.NET40</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Activities.Core.Presentation</AssemblyReference>
+      <AssemblyReference>System.Activities.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.Activities.Presentation</AssemblyReference>
+      <AssemblyReference>System.Configuration</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Messaging</AssemblyReference>
+      <AssemblyReference>System.Runtime.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Contracts</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>Distributor</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Parallel sap2010:WorkflowViewState.IdRef="Parallel_1">
+      <Sequence DisplayName="Sequence 1" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="s:Guid" Name="bookmarkId" />
+        </Sequence.Variables>
+        <local:CallClient ClientURI="{x:Null}" sap2010:WorkflowViewState.IdRef="CallClient_1">
+          <local:CallClient.Result>
+            <OutArgument x:TypeArguments="s:Guid">
+              <mca:CSharpReference x:TypeArguments="s:Guid">bookmarkId</mca:CSharpReference>
+            </OutArgument>
+          </local:CallClient.Result>
+        </local:CallClient>
+        <local:WaitForResponse sap2010:WorkflowViewState.IdRef="WaitForResponse_1">
+          <local:WaitForResponse.BookmarkName>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">bookmarkId.ToString()</mca:CSharpValue>
+            </InArgument>
+          </local:WaitForResponse.BookmarkName>
+        </local:WaitForResponse>
+      </Sequence>
+      <Sequence DisplayName="Sequence 2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="s:Guid" Name="bookmarkId" />
+        </Sequence.Variables>
+        <local:CallClient ClientURI="{x:Null}" sap2010:WorkflowViewState.IdRef="CallClient_2">
+          <local:CallClient.Result>
+            <OutArgument x:TypeArguments="s:Guid">
+              <mca:CSharpReference x:TypeArguments="s:Guid">bookmarkId</mca:CSharpReference>
+            </OutArgument>
+          </local:CallClient.Result>
+        </local:CallClient>
+        <local:WaitForResponse sap2010:WorkflowViewState.IdRef="WaitForResponse_2">
+          <local:WaitForResponse.BookmarkName>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">bookmarkId.ToString()</mca:CSharpValue>
+            </InArgument>
+          </local:WaitForResponse.BookmarkName>
+        </local:WaitForResponse>
+      </Sequence>
+      <Sequence DisplayName="Sequence 3" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="s:Guid" Name="bookmarkId" />
+        </Sequence.Variables>
+        <local:CallClient ClientURI="{x:Null}" sap2010:WorkflowViewState.IdRef="CallClient_3">
+          <local:CallClient.Result>
+            <OutArgument x:TypeArguments="s:Guid">
+              <mca:CSharpReference x:TypeArguments="s:Guid">bookmarkId</mca:CSharpReference>
+            </OutArgument>
+          </local:CallClient.Result>
+        </local:CallClient>
+        <local:WaitForResponse sap2010:WorkflowViewState.IdRef="WaitForResponse_3">
+          <local:WaitForResponse.BookmarkName>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">bookmarkId.ToString()</mca:CSharpValue>
+            </InArgument>
+          </local:WaitForResponse.BookmarkName>
+        </local:WaitForResponse>
+      </Sequence>
+      <Sequence DisplayName="Sequence 4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="s:Guid" Name="bookmarkId" />
+        </Sequence.Variables>
+        <local:CallClient ClientURI="{x:Null}" sap2010:WorkflowViewState.IdRef="CallClient_4">
+          <local:CallClient.Result>
+            <OutArgument x:TypeArguments="s:Guid">
+              <mca:CSharpReference x:TypeArguments="s:Guid">bookmarkId</mca:CSharpReference>
+            </OutArgument>
+          </local:CallClient.Result>
+        </local:CallClient>
+        <local:WaitForResponse sap2010:WorkflowViewState.IdRef="WaitForResponse_4">
+          <local:WaitForResponse.BookmarkName>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">bookmarkId.ToString()</mca:CSharpValue>
+            </InArgument>
+          </local:WaitForResponse.BookmarkName>
+        </local:WaitForResponse>
+      </Sequence>
+    </Parallel>
+    <sads:DebugSymbol.Symbol>d2JEOlxTb3VyY2VcZ2l0XHdmam9iZGlzdGFuZHBlcnNpc3RcV0ZEaXN0cmlidXRpb25BbmRQZXJzaXN0ZW5jZVxEaXN0cmlidXRvclxXb3JrZmxvd1xXb3JrZmxvdzIueGFtbBYzA4MBDgIBATQFgQEQAgECNQdHEgIBGEgHWhICARFbB20SAgEKbgeAARICAQM5CT8cAgEcQAlGIQIBGUwJUhwCARVTCVkhAgESXwllHAIBDmYJbCECAQtyCXgcAgEHeQl/IQIBBDwPPF0CAR1DD0NiAgEaTw9PXQIBFlYPVmICARNiD2JdAgEPaQ9pYgIBDHUPdV0CAQh8D3xiAgEF</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="CallClient_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WaitForResponse_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="222,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CallClient_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WaitForResponse_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="222,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CallClient_3" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WaitForResponse_3" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="222,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CallClient_4" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WaitForResponse_4" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="222,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Parallel_1" sap:VirtualizedContainerService.HintSize="1122,254" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="1144,378">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Distributor.Workflow.Workflow2_1" sap:VirtualizedContainerService.HintSize="1184,458" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
